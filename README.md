@@ -1,2 +1,2 @@
 # React
-study react &amp; react clone coding
+vanilla JS + React 공부
