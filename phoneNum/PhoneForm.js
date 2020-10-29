@@ -13,11 +13,16 @@ class PhoneForm extends Component {
         })
     }
     handleSubmit=(e)=>{
-        alert('Name: '+this.state.name + ' / Phone: '+this.state.phone)
+        // alert('Name: '+this.state.name + ' / Phone: '+this.state.phone)
         e.preventDefault();
-        this.props.onCreate({
-            name: this.state.name,
-            phone: this.state.phone,
+        // this.props.onCreate({
+        //     name: this.state.name,
+        //     phone: this.state.phone,
+        // })
+        this.props.onCreate(this.state);
+        this.setState({
+            name:'',
+            phone:'',
         })
     }
     render() {
