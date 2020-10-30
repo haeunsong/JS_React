@@ -7,9 +7,13 @@ class PhoneInfoList extends Component {
     }
     render() {
         const {data} = this.props;
-        const list = data.map(
-            info => (<PhoneInfo info={info} key={info.id}/>)
-        );
+        // const list = data.map(
+        //     arg => (<PhoneInfo info={arg} key={arg.id}/>)
+        // );
+        const list = data.map((contact,i)=>{
+            return (<li>{contact.name} {contact.phone} {i}</li>)
+        })
+
         return (
             <div>
                 {list}
